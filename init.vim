@@ -11,6 +11,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'liuchengxu/vim-which-key' 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'farmergreg/vim-lastplace'
+Plug 'mhinz/vim-startify'
 " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
