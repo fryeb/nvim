@@ -18,7 +18,7 @@ Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Settings
-set hidden
+set autowriteall
 set splitright
 set splitbelow
 set updatetime=300
@@ -50,14 +50,14 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " Key Mappings
 let mapleader=" "
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<cr>
 
 nnoremap <Esc> :noh<cr>
 nnoremap <leader>f :CtrlP<cr>
+nnoremap <leader>b :b#<cr>
 nnoremap <leader>q @q
 nnoremap <leader>v :vsplit $MYVIMRC<cr>
 nnoremap <leader>h "hyiw :help <C-r>h
-nnoremap <leader>H :helpclose<cr>
 
 nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gw :Gwrite<cr>
@@ -84,6 +84,16 @@ nnoremap <leader>cw :cw<cr>
 inoremap <Esc> <nop>
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+" Disable arrows
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Statusline
 let g:currentmode={
