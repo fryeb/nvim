@@ -65,6 +65,7 @@ nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gd :Gdiffsplit<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gl :Glog<cr>
+nnoremap <leader>gp :Gpush<cr>
 
 nnoremap <leader>ww :wincmd w<cr>
 nnoremap <leader>wv :wincmd v<cr>
@@ -123,7 +124,7 @@ augroup basic
 	au!
 	au WinLeave * silent! :write
 	au BufNewFile * :write
-	au InsertLeave * :normal =%
+	au InsertLeave *.c *.cpp *.cs :normal =%
 augroup END
 
 augroup layout
