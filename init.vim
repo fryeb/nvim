@@ -25,6 +25,7 @@ set updatetime=300
 set timeoutlen=10
 set shortmess+=c
 set signcolumn=yes
+set nodigraph
 
 " Backup files
 set nobackup
@@ -33,7 +34,7 @@ set autowriteall
 
 " Theme / UI
 colorscheme nord
-set cmdheight=1
+set cmdheight=2
 
 " CtrlP
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -135,5 +136,10 @@ augroup END
 augroup meta
 	au!
 	au BufWritePost *.vim :source $MYVIMRC
+augroup END
+
+augroup deutsch
+	au!
+	au FileType markdown set digraph
 augroup END
 
