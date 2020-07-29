@@ -34,7 +34,7 @@ set autowriteall
 
 " Theme / UI
 colorscheme nord
-set cmdheight=2
+set cmdheight=1
 
 " CtrlP
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -65,7 +65,8 @@ nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gd :Gdiffsplit<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gl :Glog<cr>
-nnoremap <leader>gp :Gpush<cr>
+nnoremap <leader>gps :Gpush<cr>
+nnoremap <leader>gpl :Gpull<cr>
 
 nnoremap <leader>ww :wincmd w<cr>
 nnoremap <leader>wv :wincmd v<cr>
