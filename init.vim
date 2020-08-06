@@ -13,7 +13,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-startify'
-" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
 
@@ -26,6 +26,7 @@ set timeoutlen=10
 set shortmess+=c
 set signcolumn=yes
 set nodigraph
+set hidden
 
 " Backup files
 set nobackup
@@ -35,6 +36,9 @@ set autowriteall
 " Theme / UI
 colorscheme nord
 set cmdheight=1
+
+" CoC
+let g:coc_global_extensions=[ 'coc-omnisharp' ]
 
 " CtrlP
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -125,7 +129,6 @@ augroup basic
 	au!
 	au WinLeave * silent! :write
 	au BufNewFile * :write
-	au InsertLeave *.c *.cpp *.cs :normal =%
 augroup END
 
 augroup layout
