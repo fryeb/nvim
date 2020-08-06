@@ -148,3 +148,7 @@ augroup deutsch
 	au FileType markdown set digraph
 augroup END
 
+augroup ctrlp
+	au!
+	au FocusGained * :CtrlPClearAllCaches
+augroup END
