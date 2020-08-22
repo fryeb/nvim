@@ -13,7 +13,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-startify'
-" Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
 
@@ -25,6 +25,8 @@ set updatetime=300
 set timeoutlen=10
 set shortmess+=c
 set signcolumn=yes
+set nodigraph
+set hidden
 
 " Backup files
 set nobackup
@@ -34,6 +36,9 @@ set autowriteall
 " Theme / UI
 colorscheme nord
 set cmdheight=1
+
+" CoC
+let g:coc_global_extensions=[ 'coc-omnisharp' ]
 
 " CtrlP
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -64,7 +69,8 @@ nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gd :Gdiffsplit<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gl :Glog<cr>
-nnoremap <leader>gp :Gpush<cr>
+nnoremap <leader>gps :Gpush<cr>
+nnoremap <leader>gpl :Gpull<cr>
 
 nnoremap <leader>ww :wincmd w<cr>
 nnoremap <leader>wv :wincmd v<cr>
@@ -123,7 +129,6 @@ augroup basic
 	au!
 	au WinLeave * silent! :write
 	au BufNewFile * :write
-	au InsertLeave *.c *.cpp *.cs :normal =%
 augroup END
 
 augroup layout
@@ -143,3 +148,12 @@ augroup dotnet
 	au FileType cs set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab 
 augroup END
 
+augroup deutsch
+	au!
+	au FileType markdown set digraph
+augroup END
+
+augroup ctrlp
+	au!
+	au FocusGained * :CtrlPClearAllCaches
+augroup END
