@@ -143,6 +143,11 @@ augroup meta
 	au BufWritePost *.vim :source $MYVIMRC
 augroup END
 
+augroup dotnet
+	au!
+	au FileType cs set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab 
+augroup END
+
 augroup deutsch
 	au!
 	au FileType markdown set digraph
