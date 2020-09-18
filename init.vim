@@ -13,7 +13,8 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-startify'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neovim/nvim-lsp'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -157,9 +158,10 @@ augroup END
 
 augroup deutsch
 	au!
-	au FileType markdown set digraph
+	"au FileType markdown set digraph
 augroup END
 
+" TODO: Greedily generate caches
 augroup ctrlp
 	au!
 	au FocusGained * :CtrlPClearAllCaches
