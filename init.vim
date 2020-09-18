@@ -61,8 +61,11 @@ nnoremap <Esc> :noh<cr>
 nnoremap <leader>f :CtrlP<cr>
 nnoremap <leader>b :b#<cr>
 nnoremap <leader>q @q
-nnoremap <leader>v :vsplit $MYVIMRC<cr>
+nnoremap <leader>v :e $MYVIMRC<cr>
 nnoremap <leader>h "hyiw :help <C-r>h
+nnoremap <leader>t :terminal<cr>
+nnoremap <leader>s :Startify<cr>
+nnoremap <leader>e :Explore<cr>
 
 nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gw :Gwrite<cr>
@@ -81,6 +84,7 @@ nnoremap <leader>wh :wincmd h<cr>
 nnoremap <leader>wj :wincmd j<cr>
 nnoremap <leader>wk :wincmd k<cr>
 nnoremap <leader>wl :wincmd l<cr>
+nnoremap <leader>w= :wincmd =<cr>
 
 nnoremap <leader>cc :cc<cr>
 nnoremap <leader>cn :cn<cr>
@@ -91,6 +95,9 @@ nnoremap <leader>cw :cw<cr>
 inoremap <Esc> <nop>
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+tnoremap jk <C-\><C-n>
+tnoremap kj <C-\><C-n>
 
 " Disable arrows
 nnoremap <up> <nop>
