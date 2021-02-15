@@ -70,7 +70,7 @@ nnoremap <leader>e :Explore<cr>
 nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gd :Gdiffsplit<cr>
-nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gps :Gpush<cr>
 nnoremap <leader>gpl :Gpull<cr>
