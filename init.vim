@@ -13,8 +13,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-startify'
-Plug 'neovim/nvim-lsp'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
