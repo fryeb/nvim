@@ -1,3 +1,6 @@
+" Reset (in case of reload)
+mapclear
+
 " Plugins
 call plug#begin()
 
@@ -7,6 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'liuchengxu/vim-which-key' 
@@ -14,6 +18,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'timonv/vim-cargo'
 
 call plug#end()
 
@@ -72,7 +77,7 @@ nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gd :Gdiffsplit<cr>
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>gl :Glog<cr>
-nnoremap <leader>gps :Gpush<cr>
+nnoremap <leader>gps :Git push<cr>
 nnoremap <leader>gpl :Gpull<cr>
 
 nnoremap <leader>ww :wincmd w<cr>
@@ -86,11 +91,15 @@ nnoremap <leader>wk :wincmd k<cr>
 nnoremap <leader>wl :wincmd l<cr>
 nnoremap <leader>w= :wincmd =<cr>
 
+nnoremap <leader>co :copen<cr>
 nnoremap <leader>cc :cc<cr>
-nnoremap <leader>cn :cn<cr>
-nnoremap <leader>cp :cp<cr>
-nnoremap <leader>cq :ccl<cr>
+nnoremap <leader>cn :cnext<cr>
+nnoremap <leader>cp :cprev<cr>
+nnoremap <leader>cq :cclose<cr>
 nnoremap <leader>cw :cw<cr>
+
+nnoremap <leader>mm :make<cr>
+nnoremap <leader>mc :make check<cr>
 
 inoremap <Esc> <nop>
 inoremap jk <Esc>

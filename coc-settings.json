@@ -1,0 +1,8 @@
+{
+	"rust-analyzer": {
+		"enable": true,
+		"inlayHints": {
+			"enable": false
+		}
+	}
+}
