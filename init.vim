@@ -80,7 +80,8 @@ nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gps :Git push<cr>
 nnoremap <leader>gpl :Gpull<cr>
 
-nnoremap <leader>ww :wincmd w<cr>
+nnoremap <Tab> :wincmd w<cr>
+"nnoremap <leader>ww :wincmd w<cr>
 nnoremap <leader>wv :wincmd v<cr>
 nnoremap <leader>ws :wincmd s<cr>
 nnoremap <leader>wq :wincmd q<cr>
