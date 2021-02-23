@@ -19,6 +19,7 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'timonv/vim-cargo'
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 
@@ -46,6 +47,8 @@ set cmdheight=1
 let g:coc_global_extensions=[ 'coc-omnisharp' ]
 
 " CtrlP
+" Note this causes ctrlp to fail when not a git repo
+" We should probably fix this
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " Sneak
