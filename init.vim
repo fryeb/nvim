@@ -1,5 +1,7 @@
 " Reset (in case of reload)
 mapclear
+syntax enable
+filetype plugin indent on
 
 " Plugins
 call plug#begin()
@@ -20,6 +22,7 @@ Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'timonv/vim-cargo'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -83,7 +86,7 @@ nnoremap <leader>gl :Glog<cr>
 nnoremap <leader>gps :Git push<cr>
 nnoremap <leader>gpl :Gpull<cr>
 
-nnoremap <Tab> :wincmd w<cr>
+nnoremap <Tab> <C-w><C-w>
 "nnoremap <leader>ww :wincmd w<cr>
 nnoremap <leader>wv :wincmd v<cr>
 nnoremap <leader>ws :wincmd s<cr>
@@ -106,11 +109,9 @@ nnoremap <leader>mm :make<cr>
 nnoremap <leader>mc :make check<cr>
 
 inoremap <Esc> <nop>
-inoremap jk <Esc>
-inoremap kj <Esc>
+inoremap <Tab> <Esc>
 
-tnoremap jk <C-\><C-n>
-tnoremap kj <C-\><C-n>
+tnoremap <Tab> <C-\><C-n>
 
 " Disable arrows
 nnoremap <up> <nop>
