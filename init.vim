@@ -27,7 +27,6 @@ Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Settings
-set autowriteall
 set splitright
 set splitbelow
 set updatetime=300
@@ -40,11 +39,13 @@ set hidden
 " Backup files
 set nobackup
 set nowritebackup
+set autoread
 set autowriteall
 
 " Theme / UI
 colorscheme nord
 set cmdheight=1
+let g:neovide_cursor_vfx_mode="wireframe"
 
 " CoC
 let g:coc_global_extensions=[ 'coc-omnisharp' ]
@@ -146,12 +147,6 @@ set statusline+=\ %m
 set statusline+=\ %{FugitiveStatusline()}
 
 " Autocommands
-augroup basic
-	au!
-	au WinLeave * silent! :write
-	au BufNewFile * :write
-augroup END
-
 augroup layout
 	au!
 	au FileType help wincmd L
@@ -178,4 +173,9 @@ augroup END
 augroup ctrlp
 	au!
 	au FocusGained * :CtrlPClearAllCaches
+augroup END
+
+augroup rust
+	au!
+	au BufWritePre *.rs :RustFmt
 augroup END

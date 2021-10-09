@@ -4,5 +4,7 @@
 		"inlayHints": {
 			"enable": false
 		}
-	}
+	},
+    "coc.source.OmniSharp.enable": true,
+    "clangd.path": "C:\\Users\\Benjamin Frye\\AppData\\Local\\coc\\extensions\\coc-clangd-data\\install\\12.0.1\\clangd_12.0.1\\bin\\clangd.exe"
 }
