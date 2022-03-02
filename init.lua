@@ -1,3 +1,5 @@
+vim.cmd([[
+
 " Reset (in case of reload)
 mapclear
 syntax enable
@@ -27,6 +29,7 @@ Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Settings
+set termguicolors
 set splitright
 set splitbelow
 set updatetime=300
@@ -179,3 +182,5 @@ augroup rust
 	au!
 	au BufWritePre *.rs :RustFmt
 augroup END
+
+]])
